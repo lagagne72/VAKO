@@ -1,1 +1,55 @@
-HELLO
+
+<b>Déterminez vos sens dominants</b>
+<br>
+<i>Vous pouvez ne cocher aucune case, ou plusieurs, si vous n’avez pas de réponse claire immédiate </i>
+<br>
+<br>
+1. Lorsque vous évoquez le souvenir d’une personne, qu’est-ce qui vous vient en premier à l’esprit ?
+<br>
+<input type="checkbox" id="1V"> Son physique, la couleur de ses cheveux et de ses yeux.
+<br>
+<input type="checkbox" id="1A"> Ce qu’elle vous a dit et plus particulièrement sa façon de s’exprimer.
+<br>
+<input type="checkbox" id="1K"> Les impressions que vous avez pu ressentir en sa présence, son parfum, un je-ne-sais-quoi qui se dégageait de sa personnalité.
+<br>
+
+<br>
+2. Vous préférez :
+<br>
+<input type="checkbox" id="2A"> Écouter de la musique.
+<br>
+<input type="checkbox" id="2V"> Lire.
+<br>
+<input type="checkbox" id="2K"> Dessiner.
+<br>
+<br>
+<button type="button" onclick="calc()">Calculer!</button>
+
+
+<script>
+
+function calc(){
+
+   // alert("YES")
+    var totalVisuel = 0
+    var totalAudio = 0
+    var totalKines = 0
+
+    if(document.getElementById("1V").checked){totalVisuel++}
+    if(document.getElementById("1A").checked){totalAudio++}
+    if(document.getElementById("1K").checked){totalKines++}
+
+    if(document.getElementById("2V").checked){totalVisuel++}
+    if(document.getElementById("2A").checked){totalAudio++}
+    if(document.getElementById("2K").checked){totalVisuel++}
+
+
+    alert("VISUEL: " + totalVisuel + " / AUDIO: " + totalAudio + " / KINES: " + totalKines)
+
+
+}
+
+</script>
+
+
+
