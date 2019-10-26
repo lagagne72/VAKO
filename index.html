@@ -1,55 +1,542 @@
+<!DOCTYPE html>
+<html>
 
-<b>Déterminez vos sens dominants</b>
-<br>
-<i>Vous pouvez ne cocher aucune case, ou plusieurs, si vous n’avez pas de réponse claire immédiate </i>
-<br>
-<br>
-1. Lorsque vous évoquez le souvenir d’une personne, qu’est-ce qui vous vient en premier à l’esprit ?
-<br>
-<input type="checkbox" id="1V"> Son physique, la couleur de ses cheveux et de ses yeux.
-<br>
-<input type="checkbox" id="1A"> Ce qu’elle vous a dit et plus particulièrement sa façon de s’exprimer.
-<br>
-<input type="checkbox" id="1K"> Les impressions que vous avez pu ressentir en sa présence, son parfum, un je-ne-sais-quoi qui se dégageait de sa personnalité.
-<br>
+<head>
+    <title>Test VAKO</title>
+</head>
 
-<br>
-2. Vous préférez :
-<br>
-<input type="checkbox" id="2A"> Écouter de la musique.
-<br>
-<input type="checkbox" id="2V"> Lire.
-<br>
-<input type="checkbox" id="2K"> Dessiner.
-<br>
-<br>
-<button type="button" onclick="calc()">Calculer!</button>
+<body>
+
+    <div class="title">
+        <b>Déterminez vos sens dominants</b>
+    </div>
+    <div style="margin-left:20px;">
+        <i>Vous pouvez ne cocher aucune case, ou plusieurs, si vous n’avez pas de réponse claire immédiate. </i>
+    </div>
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">1</div>
+
+            <div class="questionMain">Lorsque vous évoquez le souvenir d’une personne, qu’est-ce qui vous vient en
+                premier à l’esprit ?
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="1V"> Son physique, la couleur de ses cheveux et de ses yeux.
+            <br>
+            <input type="checkbox" id="1A"> Ce qu’elle vous a dit et plus particulièrement sa façon de s’exprimer.
+            <br>
+            <input type="checkbox" id="1K"> Les impressions que vous avez pu ressentir en sa présence, son parfum, un
+            je-ne-sais-quoi qui se dégageait de sa personnalité.
+        </div>
+    </div>
+
+    <div class="question">
+
+        <div class="questionTitle">
+            <div class="number">2</div>
+
+            <div class="questionMain">Vous préférez:
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="2A"> Écouter de la musique.
+            <br>
+            <input type="checkbox" id="2V"> Lire.
+            <br>
+            <input type="checkbox" id="2K"> Dessiner.
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">3</div>
+
+            <div class="questionMain">Pour vous, un chat évoque :
+            </div>
+        </div>
+
+        <div class="questionAnswer">
+            <input type="checkbox" id="3V"> Un poil d’une certaine couleur.
+            <br>
+            <input type="checkbox" id="3A"> Le ronronnement.
+            <br>
+            <input type="checkbox" id="3K"> La douceur de son poil.
+        </div>
+    </div>
 
 
-<script>
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">4</div>
 
-function calc(){
+            <div class="questionMain">Qu’est-ce qui vous marque le plus ?
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="4V"> Un livre.
+            <br>
+            <input type="checkbox" id="4A"> Une chanson.
+            <br>
+            <input type="checkbox" id="4K"> Le goût d’un plat, ou la douceur des draps.
+        </div>
+    </div>
 
-   // alert("YES")
-    var totalVisuel = 0
-    var totalAudio = 0
-    var totalKines = 0
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">5</div>
 
-    if(document.getElementById("1V").checked){totalVisuel++}
-    if(document.getElementById("1A").checked){totalAudio++}
-    if(document.getElementById("1K").checked){totalKines++}
+            <div class="questionMain">Quand vous pensez aux dernières vacances que vous avez passées au bord de la mer:
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="5V"> Vous revoyez le bleu de la mer et le soleil qui brille dans le ciel.
+            <br>
+            <input type="checkbox" id="5A"> Vous entendez les vagues qui viennent mourir sur la plage.
+            <br>
+            <input type="checkbox" id="5K"> Vous ressentez l’eau qui enveloppait votre corps ou la chaleur du soleil sur
+            votre dos lorsque vous étiez allongé(e) sur le sable.
+        </div>
+    </div>
 
-    if(document.getElementById("2V").checked){totalVisuel++}
-    if(document.getElementById("2A").checked){totalAudio++}
-    if(document.getElementById("2K").checked){totalVisuel++}
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">6</div>
+
+            <div class="questionMain">Que dites vous le plus souvent?
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="6V"> « J’imagine que » ou encore « Je vois bien que ».
+            <br>
+            <input type="checkbox" id="6A"> « J’entends bien » ou encore « Ce que vous me dites fait écho à ».
+            <br>
+            <input type="checkbox" id="6K"> « Je me prends la tête » ou « Cet exemple est frappant ! ».
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">7</div>
+
+            <div class="questionMain">Si vous vous souvenez d’une fête entre amis :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="7V"> Vous vous repassez le film de la soirée.
+            <br>
+            <input type="checkbox" id="7A"> La musique vous revient à l’esprit.
+            <br>
+            <input type="checkbox" id="7K"> Vous ressentez la chaleur qui régnait dans la pièce.
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">8</div>
+
+            <div class="questionMain">Lorsque vous descendez dans un hôtel, l’important pour vous est :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="8V"> Les meubles et plus généralement la décoration.
+            <br>
+            <input type="checkbox" id="8A"> L’absence de bruit.
+            <br>
+            <input type="checkbox" id="8K"> Le confort des lieux.
+        </div>
+    </div>
 
 
-    alert("VISUEL: " + totalVisuel + " / AUDIO: " + totalAudio + " / KINES: " + totalKines)
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">9</div>
+
+            <div class="questionMain">Après avoir vu un film, que vous reste-t-il de la séance ?
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="9V"> L’ensemble du scénario.
+            <br>
+            <input type="checkbox" id="9A"> Les dialogues et la musique.
+            <br>
+            <input type="checkbox" id="9K"> Les émotions qu’il a suscitées.
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">10</div>
+
+            <div class="questionMain">Quand vous préparez un nouveau plat, vous aimez :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="10V"> Suivre la recette.
+            <br>
+            <input type="checkbox" id="10A"> Appeler votre mère ou une amie pour lui demander des explications.
+            <br>
+            <input type="checkbox" id="10K"> Suivre votre instinct et goûter le plat.
+        </div>
+    </div>
 
 
-}
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">11</div>
 
-</script>
+            <div class="questionMain">Quand vous avez décidé de partir en vacances, vous commencez par :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="11V"> Lire toutes les brochures.
+            <br>
+            <input type="checkbox" id="11A"> Écouter les recommandations de vos amis.
+            <br>
+            <input type="checkbox" id="11K"> Imaginer que vous êtes déjà sur place.
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">12</div>
+
+            <div class="questionMain">Quand vous êtes angoissé(e) :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="12V"> Vous vous repassez les scénarios catastrophes sans cesse dans votre tête.
+            <br>
+            <input type="checkbox" id="12A"> Vous discutez dans votre tête de ce qui vous cause le plus de souci.
+            <br>
+            <input type="checkbox" id="12K"> Vous bougez constamment.
+        </div>
+    </div>
+
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">13</div>
+
+            <div class="questionMain">Vous passez la plus grande partie de votre temps libre à :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="13V"> Surfer sur Internet.
+            <br>
+            <input type="checkbox" id="13A"> Parler avec des amis.
+            <br>
+            <input type="checkbox" id="13K"> Faire du sport ou d’autres activités.
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">14</div>
+
+            <div class="questionMain">Il vous est plus facile de vous souvenir :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="14V"> Des visages.
+            <br>
+            <input type="checkbox" id="14A"> Des noms.
+            <br>
+            <input type="checkbox" id="14K"> Des choses que vous avez faites.
+        </div>
+    </div>
+
+
+    <div class="question">
+        <div class="questionTitle">
+            <div class="number">15</div>
+
+            <div class="questionMain">Lorsque vous avez l’impression que quelqu’un vous ment, vous le remarquez par le
+                fait :
+            </div>
+        </div>
+        <div class="questionAnswer">
+            <input type="checkbox" id="15V"> Qu’il évite de vous regarder.
+            <br>
+            <input type="checkbox" id="15A"> Que sa voix change.
+            <br>
+            <input type="checkbox" id="15K"> Que vous ressentez des impressions bizarres.
+        </div>
+    </div>
+
+
+    <div>
+        <button id="but" type="button" onclick="calc()">Calculer!</button>
+    </div>
+
+
+    <div id='resultat'>
+
+        <div id="resultatTitle">
+            Votre calcul de VAKO:
+        </div>
+
+        <div id="resultatBody">
+            <div class="rezLine">
+                <div>👂 Auditif </div>
+                <div class="rezNumber" id="rezAudi"></div>
+            </div>
+            <div class="rezLine">
+                <div>👁 Visuel </div>
+                <div class="rezNumber"  id="rezVisu"></div>
+            </div>
+            <div class="rezLine">
+                <div> 💗 Kinesthésique</div>
+                <div class="rezNumber" id="rezKine"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function calc() {
+
+            // alert("YES")
+            var totalVisuel = 0
+            var totalAudio = 0
+            var totalKines = 0
+
+            if (document.getElementById("1V").checked) { totalVisuel++ }
+            if (document.getElementById("1A").checked) { totalAudio++ }
+            if (document.getElementById("1K").checked) { totalKines++ }
+
+            if (document.getElementById("2V").checked) { totalVisuel++ }
+            if (document.getElementById("2A").checked) { totalAudio++ }
+            if (document.getElementById("2K").checked) { totalKines++ }
+
+            if (document.getElementById("3V").checked) { totalVisuel++ }
+            if (document.getElementById("3A").checked) { totalAudio++ }
+            if (document.getElementById("3K").checked) { totalKines++ }
+
+            if (document.getElementById("4V").checked) { totalVisuel++ }
+            if (document.getElementById("4A").checked) { totalAudio++ }
+            if (document.getElementById("4K").checked) { totalKines++ }
+
+            if (document.getElementById("5V").checked) { totalVisuel++ }
+            if (document.getElementById("5A").checked) { totalAudio++ }
+            if (document.getElementById("5K").checked) { totalKines++ }
+
+            if (document.getElementById("6V").checked) { totalVisuel++ }
+            if (document.getElementById("6A").checked) { totalAudio++ }
+            if (document.getElementById("6K").checked) { totalKines++ }
+
+            if (document.getElementById("7V").checked) { totalVisuel++ }
+            if (document.getElementById("7A").checked) { totalAudio++ }
+            if (document.getElementById("7K").checked) { totalKines++ }
+
+            if (document.getElementById("8V").checked) { totalVisuel++ }
+            if (document.getElementById("8A").checked) { totalAudio++ }
+            if (document.getElementById("8K").checked) { totalKines++ }
+
+            if (document.getElementById("9V").checked) { totalVisuel++ }
+            if (document.getElementById("9A").checked) { totalAudio++ }
+            if (document.getElementById("9K").checked) { totalKines++ }
+
+            if (document.getElementById("10V").checked) { totalVisuel++ }
+            if (document.getElementById("10A").checked) { totalAudio++ }
+            if (document.getElementById("10K").checked) { totalKines++ }
+
+            if (document.getElementById("11V").checked) { totalVisuel++ }
+            if (document.getElementById("11A").checked) { totalAudio++ }
+            if (document.getElementById("11K").checked) { totalKines++ }
+
+            if (document.getElementById("12V").checked) { totalVisuel++ }
+            if (document.getElementById("12A").checked) { totalAudio++ }
+            if (document.getElementById("12K").checked) { totalKines++ }
+
+            if (document.getElementById("13V").checked) { totalVisuel++ }
+            if (document.getElementById("13A").checked) { totalAudio++ }
+            if (document.getElementById("13K").checked) { totalKines++ }
+
+            if (document.getElementById("14V").checked) { totalVisuel++ }
+            if (document.getElementById("14A").checked) { totalAudio++ }
+            if (document.getElementById("14K").checked) { totalKines++ }
+
+            if (document.getElementById("15V").checked) { totalVisuel++ }
+            if (document.getElementById("15A").checked) { totalAudio++ }
+            if (document.getElementById("15K").checked) { totalKines++ }
 
 
 
+
+            document.getElementById("rezAudi").innerHTML = totalAudio;
+            document.getElementById("rezVisu").innerHTML = totalVisuel;
+            document.getElementById("rezKine").innerHTML = totalKines;
+            document.getElementById("resultat").style.visibility = "visible";
+
+          //  alert("VISUEL: " + totalVisuel + " / AUDIO: " + totalAudio + " / KINES: " + totalKines)
+
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+
+
+<style type="text/css">
+    body {
+        background-color: #F4ECF7;
+        color: #633974;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    div.title {
+        margin: 10px;
+        background-color: #893fa7;
+        -webkit-box-shadow: 0px 0px 13px -7px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 13px -7px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 13px -7px rgba(0, 0, 0, 1);
+        color: white;
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        font-size: 20px;
+        border-radius: 5px;
+        text-align: center;
+
+    }
+
+    div.question {
+        margin: 10px;
+        padding: 10px;
+
+        background-color: #EBDEF0;
+        border-radius: 5px;
+    }
+
+    div.questionTitle {
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        vertical-align: middle;
+    }
+
+    div.questionMain {
+
+        /*line-height: 40px;*/
+        font-weight: bold;
+
+
+    }
+
+    div.questionAnswer {
+        margin: 10px;
+    }
+
+    div.number {
+
+        background-color: #633974;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        line-height: 20px;
+
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    #but {
+
+        background-color: #893fa7;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        margin: auto;
+        border-style: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-left: 30px;
+
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(137, 63, 167, 1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(137, 63, 167, 1);
+        box-shadow: 0px 0px 5px 0px rgba(137, 63, 167, 1);
+
+        cursor: pointer;
+    }
+
+    #resultat {
+
+        margin: 10px;
+
+
+        width: calc(100% - 20px);
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: #893fa7;
+        border-radius: 5px;
+
+        visibility:hidden;
+
+    }
+
+    #resultatTitle {
+
+        font-weight: bold;
+        color: #893fa7;
+        margin: 10px;
+        font-size: 18px;
+
+
+        /* visibility:hidden;*/
+    }
+
+
+    div.rezLine {
+        margin: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bold;
+
+        display:grid;
+        grid-template-columns: 200px auto;
+        text-align: left;
+
+        vertical-align: middle;
+        grid-gap: 10px;
+
+        line-height: 50px;
+    }
+
+    div.rezNumber {
+
+        border-radius: 50%;
+border-style: solid;
+ border-width: 2px;
+ border-color: #893fa7;
+ height:30px;
+ width:30px;
+ margin:6px;
+ text-align: center;
+ line-height: 30px;
+    }
+
+    p {
+        color: red;
+    }
+</style>
