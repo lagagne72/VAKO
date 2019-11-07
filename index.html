@@ -40,9 +40,9 @@
             </div>
         </div>
         <div class="questionAnswer">
-            <input type="checkbox" id="2A"> Écouter de la musique.
-            <br>
             <input type="checkbox" id="2V"> Lire.
+            <br>
+            <input type="checkbox" id="2A"> Écouter de la musique.
             <br>
             <input type="checkbox" id="2K"> Dessiner.
         </div>
@@ -103,22 +103,6 @@
         <div class="questionTitle">
             <div class="number">6</div>
 
-            <div class="questionMain">Que dites vous le plus souvent?
-            </div>
-        </div>
-        <div class="questionAnswer">
-            <input type="checkbox" id="6V"> « J’imagine que » ou encore « Je vois bien que ».
-            <br>
-            <input type="checkbox" id="6A"> « J’entends bien » ou encore « Ce que vous me dites fait écho à ».
-            <br>
-            <input type="checkbox" id="6K"> « Je me prends la tête » ou « Cet exemple est frappant ! ».
-        </div>
-    </div>
-
-    <div class="question">
-        <div class="questionTitle">
-            <div class="number">7</div>
-
             <div class="questionMain">Si vous vous souvenez d’une fête entre amis :
             </div>
         </div>
@@ -133,7 +117,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">8</div>
+            <div class="number">7</div>
 
             <div class="questionMain">Lorsque vous descendez dans un hôtel, l’important pour vous est :
             </div>
@@ -151,7 +135,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">9</div>
+            <div class="number">8</div>
 
             <div class="questionMain">Après avoir vu un film, que vous reste-t-il de la séance ?
             </div>
@@ -167,7 +151,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">10</div>
+            <div class="number">9</div>
 
             <div class="questionMain">Quand vous préparez un nouveau plat, vous aimez :
             </div>
@@ -184,7 +168,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">11</div>
+            <div class="number">10</div>
 
             <div class="questionMain">Quand vous avez décidé de partir en vacances, vous commencez par :
             </div>
@@ -200,7 +184,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">12</div>
+            <div class="number">11</div>
 
             <div class="questionMain">Quand vous êtes angoissé(e) :
             </div>
@@ -217,7 +201,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">13</div>
+            <div class="number">12</div>
 
             <div class="questionMain">Vous passez la plus grande partie de votre temps libre à :
             </div>
@@ -233,7 +217,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">14</div>
+            <div class="number">13</div>
 
             <div class="questionMain">Il vous est plus facile de vous souvenir :
             </div>
@@ -250,7 +234,7 @@
 
     <div class="question">
         <div class="questionTitle">
-            <div class="number">15</div>
+            <div class="number">14</div>
 
             <div class="questionMain">Lorsque vous avez l’impression que quelqu’un vous ment, vous le remarquez par le
                 fait :
@@ -279,13 +263,14 @@
 
         <div id="resultatBody">
             <div class="rezLine">
+                <div>👁 Visuel </div>
+                <div class="rezNumber" id="rezVisu"></div>
+            </div>
+            <div class="rezLine">
                 <div>👂 Auditif </div>
                 <div class="rezNumber" id="rezAudi"></div>
             </div>
-            <div class="rezLine">
-                <div>👁 Visuel </div>
-                <div class="rezNumber"  id="rezVisu"></div>
-            </div>
+
             <div class="rezLine">
                 <div> 💗 Kinesthésique</div>
                 <div class="rezNumber" id="rezKine"></div>
@@ -324,11 +309,11 @@
             if (document.getElementById("5V").checked) { totalVisuel++ }
             if (document.getElementById("5A").checked) { totalAudio++ }
             if (document.getElementById("5K").checked) { totalKines++ }
-
-            if (document.getElementById("6V").checked) { totalVisuel++ }
-            if (document.getElementById("6A").checked) { totalAudio++ }
-            if (document.getElementById("6K").checked) { totalKines++ }
-
+            /*
+                        if (document.getElementById("6V").checked) { totalVisuel++ }
+                        if (document.getElementById("6A").checked) { totalAudio++ }
+                        if (document.getElementById("6K").checked) { totalKines++ }
+            */
             if (document.getElementById("7V").checked) { totalVisuel++ }
             if (document.getElementById("7A").checked) { totalAudio++ }
             if (document.getElementById("7K").checked) { totalKines++ }
@@ -373,7 +358,7 @@
             document.getElementById("rezKine").innerHTML = totalKines;
             document.getElementById("resultat").style.visibility = "visible";
 
-          //  alert("VISUEL: " + totalVisuel + " / AUDIO: " + totalAudio + " / KINES: " + totalKines)
+            //  alert("VISUEL: " + totalVisuel + " / AUDIO: " + totalAudio + " / KINES: " + totalKines)
 
 
 
@@ -491,7 +476,7 @@
         border-color: #893fa7;
         border-radius: 5px;
 
-        visibility:hidden;
+        visibility: hidden;
 
     }
 
@@ -513,7 +498,7 @@
         font-size: 18px;
         font-weight: bold;
 
-        display:grid;
+        display: grid;
         grid-template-columns: 200px auto;
         text-align: left;
 
@@ -526,14 +511,14 @@
     div.rezNumber {
 
         border-radius: 50%;
-border-style: solid;
- border-width: 2px;
- border-color: #893fa7;
- height:30px;
- width:30px;
- margin:6px;
- text-align: center;
- line-height: 30px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #893fa7;
+        height: 30px;
+        width: 30px;
+        margin: 6px;
+        text-align: center;
+        line-height: 30px;
     }
 
     p {
